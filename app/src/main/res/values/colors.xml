@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="grid">#45ffffff</color>
+    <color name="grid_stroke">#aaffffff</color>
+    <color name="grey">#999999</color>
+    <color name="normal_button">#75000000</color>
+    <color name="normal_button_stroke">#8b8b8b</color>
+    <color name="normal_button_stroke_selected">#e1e1e1</color>
+    <color name="replay_button">#bb000000</color>
+    <color name="replay_button_stroke">#8b8b8b</color>
+    <color name="replay_button_stroke_selected">#e1e1e1</color>
+    <color name="input_box">#75000000</color>
+    <color name="input_box_stroke">#8b8b8b</color>
+    <color name="info_box">#75000000</color>
+    <color name="info_box_stroke">#8b8b8b</color>
+    <color name="info_box_stroke_selected">#bfb43d</color>
+    <color name="login_button">#3F51B5</color>
+</resources>

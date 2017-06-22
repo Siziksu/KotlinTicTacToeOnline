@@ -1,0 +1,82 @@
+<resources>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="AppTheme.PlayerInfo">
+        <item name="android:background">@drawable/info_box</item>
+        <item name="android:textColor">#dddddd</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.SubPlayerInfo">
+        <item name="android:textColor">#40ffffff</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.Button">
+        <item name="android:background">@drawable/normal_button</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:minHeight">32dp</item>
+    </style>
+
+    <style name="AppTheme.LoginButton">
+        <item name="android:background">@drawable/login_button</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:minHeight">32dp</item>
+    </style>
+
+    <style name="AppTheme.ReplayButton">
+        <item name="android:background">@drawable/replay_button</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="AppTheme.GameButton">
+        <item name="android:background">@drawable/game_button</item>
+        <item name="android:onClick">gameButtonClick</item>
+    </style>
+
+    <style name="AppTheme.InputText">
+        <item name="android:textSize">13sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">#ffababab</item>
+        <item name="android:textColorHint">#ffababab</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/input_text</item>
+    </style>
+
+    <style name="AppTheme.LoginInputText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:minEms">14</item>
+    </style>
+
+    <style name="AppTheme.InputTextLabel" parent="Theme.AppCompat.Light">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:textSize">15sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+</resources>

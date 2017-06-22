@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.siziksu.kotlinTicTacToe"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 2519001
+        versionName "0.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    // Disable signing if there is no available keystore (local development)
+    def properSigningConfig = android.signingConfigs.debug
+    // KeyStore and KeyAlias Password. Uses environment variables to resolve.
+    def keyStorePass = "$System.env.KEY_STORE_PASS"
+    def keyAliasName = "$System.env.KEY_ALIAS"
+    def keyAliasPassword = "$System.env.KEY_ALIAS_PASS"
+    // keyStorePath should point to the .jks file
+    def keyStorePath = "$System.env.KEY_PATH"
+    signingConfigs {
+        release {
+            storeFile file(keyStorePath)
+            storePassword keyStorePass
+            keyAlias keyAliasName
+            keyPassword keyAliasPassword
+        }
+    }
+    if (keyStorePath != "null") {
+        // Set signing config to use this keystore
+        properSigningConfig = signingConfigs.release
+    }
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig properSigningConfig
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.firebase:firebase-auth:10.0.1'
+    compile 'com.google.firebase:firebase-database:10.0.1'
+}
+
+apply plugin: 'com.google.gms.google-services'
